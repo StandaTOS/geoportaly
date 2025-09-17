@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O projektu - Geoportály ČR</title>
+    <meta name="description" content="Informace o rozcestníku geoportálů České republiky">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <link rel="icon" href="public/lovable-uploads/77634cd9-1c01-4cc1-9fd7-0a565b184b2c.png" type="image/png">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo-link">
+                <img src="public/lovable-uploads/77634cd9-1c01-4cc1-9fd7-0a565b184b2c.png" alt="Geoportály ČR Logo" class="logo">
+                <h1 class="logo-text">Geoportály ČR</h1>
+            </a>
+            
+            <nav class="nav desktop-nav">
+                <a href="about.html" class="nav-link">O projektu</a>
+                <div class="dropdown">
+                <a href="#" class="nav-link dropdown-toggle">Portály</a>
+                    <div class="dropdown-content">
+                        <a href="regions.html" class="nav-link">Kraje</a>
+                        <a href="cities.html" class="nav-link">Města/Obce</a>
+                        <a href="organizations.html" class="nav-link">Organizace</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-link">Kontakt</a>
+            </nav>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <nav class="mobile-nav" id="mobileNav">
+            <a href="about.html" class="mobile-nav-link">O projektu</a>
+            <a href="regions.html" class="mobile-nav-link">Portály</a>
+            <a href="contact.html" class="mobile-nav-link">Kontakt</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Content Section -->
+        <section class="page-content">
+            <div class="container">
+                <h1 class="section-title">O projektu</h1>
+
+                <div class="content-card">
+                    <h2 style="font-size: 1.5rem; font-weight: 700; color: #0e3264; margin-bottom: 1rem;">
+                        Rozcestník geoportálů České republiky
+                    </h2>
+                    
+                    <p style="margin-bottom: 1rem;">
+                        Vítejte na rozcestníku geoportálů České republiky - centrálním místě, kde můžete najít odkazy na všechny 
+                        významné geoportály z celé země. Tento portál slouží jako vstupní brána ke geografickým informacím 
+                        poskytovaným různými institucemi, regiony a obcemi.
+                    </p>
+                    
+                    <p style="margin-bottom: 2rem;">
+                        Cílem je zjednodušit přístup k prostorovým datům a mapovým službám, a tím podpořit jejich 
+                        efektivnější využívání ve veřejné správě, akademickém sektoru i komerční sféře.
+                    </p>
+
+                     <p style="margin-bottom: 2rem;">
+                        Tato myšlenka vznikla na GIS OSTRAVA 2025 během diskuze se dvěma studenty VŠB o rešerších mapových portálů. 
+                        Chyběl nějaký ucelený přehled těchto portálů a tak jsem se rozhodl takový rozcestník vytvořit s pomocí Open Source a AI.
+                        Pro návrh webu byl využit Lovable a následně byly prováděny úpravy. Mapa je postaven na Leaflet knihovně s využitím dat ArcČR500.<br>
+                        Určitě zde nejsou všechny portály. Pokud o nějakém víte napište na uvedený email a bude doplněn. 
+
+                    </p>
+
+                    <h3 style="font-size: 1.25rem; font-weight: 700; color: #0e3264; margin-bottom: 0.75rem;">
+                        Co na rozcestníku najdete:
+                    </h3>
+                    
+                    <ul style="list-style-type: disc; margin-left: 1.5rem; margin-bottom: 2rem; line-height: 1.8;">
+                        <li>Odkazy na geoportály všech krajů České republiky</li>
+                        <li>Přístupy k mapovým službám měst a obcí</li>
+                        <li>Specializované geoportály státních organizací a výzkumných institucí</li>
+                        <li>Přehled dostupných prostorových dat a služeb</li>
+                    </ul>
+
+                    <div style="text-align: center; margin-top: 2rem;">
+                        <img src="logo/GČR__2_-removebg-preview.png" alt="Geoportály ČR Logo" style="width: 8rem; height: 8rem;">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="public/lovable-uploads/77634cd9-1c01-4cc1-9fd7-0a565b184b2c.png" alt="Geoportály ČR Logo" class="footer-logo-img">
+                    <span class="footer-logo-text">Geoportály ČR</span>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="about.html" class="footer-link">O projektu</a>
+                    <a href="contact.html" class="footer-link">Kontakt</a>
+                </div>
+                
+                <div class="footer-brand">
+                    <img src="logo/dst_white.png" alt="Design Studio TOS" class="footer-brand-img">
+                </div>
+            </div>
+            
+            <div class="footer-copyright">
+                © 2025 Geoportály ČR. | Vytvořilo Design Studio TOS | Všechna práva vyhrazena.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>

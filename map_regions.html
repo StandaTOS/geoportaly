@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Geoportály krajů ČR</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        #map { 
+            height: 100vh;
+            width: 100%;
+            border-radius: 20px;
+        }
+        .leaflet-popup-content h3 {
+            margin-top: 0;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <script>
+        // Inicializace mapy a nastavení výchozího zobrazení
+        const map = L.map('map', {
+            attributionControl:false,
+            fullscreenControl: true,
+            fullscreenControlOptions: {
+            position: 'topleft',}
+        }).setView([49.8, 15.0], 18);
+
+         // Omezení mapy na území ČR
+        map.setMaxBounds([
+            [48.5, 12.0], // Jihozápadní roh (přibližně)
+            [51.1, 19.0]  // Severovýchodní roh (přibližně)
+        ]);
+
+        var attControl = L.control.attribution().addTo(map);
+        attControl.setPrefix('<a href="https://leafletjs.com/">Leaflet</a>, © ArcCR500 2012');
+
+
+        // Načtení GeoJSON dat z externího souboru
+        fetch('/geojson/geoportaly.geojson')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Chyba při načítání souboru: ' + response.statusText);
+                }
+                return response.json();
+            })
+            .then(data => {
+                // Vytvoření GeoJSON vrstvy z načtených dat
+                const krajeLayer = L.geoJSON(data, {
+                    // Funkce pro stylizování krajů
+                    style: function(feature) {
+                        return {
+                            fillColor: '#b0d9ff', // Světle modrá
+                            weight: 2,
+                            opacity: 1,
+                            color: '#0070c0',     // Modrý obrys
+                            fillOpacity: 0.7
+                        };
+                    },
+                    // Funkce, která se provede pro každý prvek
+                    onEachFeature: function(feature, layer) {
+                        // Vytvoření obsahu popupu
+                        const popupContent = `
+                            <h3>${feature.properties.NAZ_CZNUTS}</h3>
+                            <a href="${feature.properties.odkaz}" target="_blank">Otevřít geoportál</a>
+                        `;
+                        
+                        // Připojení popupu k vrstvě
+                        layer.bindPopup(popupContent);
+                        
+                        // Přidání akce pro zvýraznění při najetí myši
+                        layer.on('mouseover', function (e) {
+                            layer.setStyle({
+                                weight: 4,
+                                fillOpacity: 0.9
+                            });
+                        });
+                        
+                        // Přidání akce pro návrat k původnímu stylu
+                        layer.on('mouseout', function (e) {
+                            krajeLayer.resetStyle(e.target);
+                        });
+                    }
+                }).addTo(map);
+
+                // Přizpůsobení pohledu mapy, aby byly vidět všechny kraje
+                map.fitBounds(krajeLayer.getBounds());
+            })
+            .catch(error => console.error('Došlo k chybě:', error));
+    </script>
+</body>
+</html>

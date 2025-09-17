@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kraje - Geoportály ČR</title>
+    <meta name="description" content="Přehled geoportálů všech krajů České republiky">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <link rel="icon" href="public/lovable-uploads/77634cd9-1c01-4cc1-9fd7-0a565b184b2c.png" type="image/png">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo-link">
+                <img src="public/lovable-uploads/77634cd9-1c01-4cc1-9fd7-0a565b184b2c.png" alt="Geoportály ČR Logo" class="logo">
+                <h1 class="logo-text">Geoportály ČR</h1>
+            </a>
+            
+           <nav class="nav desktop-nav">
+                <a href="about.html" class="nav-link">O projektu</a>
+                <div class="dropdown">
+                <a href="#" class="nav-link dropdown-toggle">Portály</a>
+                    <div class="dropdown-content">
+                        <a href="regions.html" class="nav-link">Kraje</a>
+                        <a href="cities.html" class="nav-link">Města/Obce</a>
+                        <a href="organizations.html" class="nav-link">Organizace</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-link">Kontakt</a>
+            </nav>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <nav class="mobile-nav" id="mobileNav">
+            <a href="about.html" class="mobile-nav-link">O projektu</a>
+            <a href="regions.html" class="mobile-nav-link">Portály</a>
+            <a href="contact.html" class="mobile-nav-link">Kontakt</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="page-hero">
+            <div class="container">
+                <h1 class="page-title">Kraje</h1>
+                <p class="page-description">
+                    Přehled geoportálů všech krajů České republiky
+                </p>
+            </div>
+        </section>
+
+        <!-- Content Section -->
+        <section class="page-content">
+            <div class="container">
+                <div class="map-controls">
+                    <div class="toggle-buttons">
+                        <button id="mapBtn" class="toggle-btn active" onclick="toggleView('map')">
+                            Mapa
+                        </button>
+                        <button id="listBtn" class="toggle-btn" onclick="toggleView('list')">
+                            Seznam
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Map View -->
+                 <div id="mapView">
+                    <iframe src="/map_regions.html" title="Mapa krajů" class="map-iframe"></iframe>
+                </div>
+
+                <!-- List View -->
+                <div id="listView" style="display: none;">
+                    <div class="grid grid-3">
+                        <a href="https://geoportalpraha.cz/" target="_blank" class="card">
+                            <h3 class="card-title">Hlavní město Praha</h3>
+                            <p class="card-description">Geoportál Hlavní město Praha</p>
+                            <div class="card-arrow">Otevřít geoportál →</div>
+                        </a>
+                        <a href="https://kusk.maps.arcgis.com/home/index.html" target="_blank" class="card">
+                            <h3 class="card-title">Středočeský kraj</h3>
+                            <p class="card-description">Geoportál Středočeský kraj</p>
+                            <div class="card-arrow">Otevřít geoportál →</div>
+                        </a>
+                        <a href="https://geoportal.kraj-jihocesky.gov.cz/portal/" target="_blank" class="card">
+                            <h3 class="card-title">Jihočeský kraj</h3>
+                            <p class="card-description">Geoportál Jihočeský kraj</p>
+                            <div class="card-arrow">Otevřít geoportál →</div>
+                        </a>
+                        <a href="https://geoportal.plzensky-kraj.cz/portal/" target="_blank" class="card">
+                            <h3 class="card-title">Plzeňský kraj</h3>
+                            <p class="card-description">Geoportál Plzeňský kraj</p>
+                            <div class="card-arrow">Otevřít geoportál →</div>
+                        </a>
+                        <a href="https://geoportal.kr-karlovarsky.cz/web" target="_blank" class="card">
+                            <h3 class="card-title">Karlovarský kraj</h3>
+                            <p class="card-description">Geoportál Karlovarský kraj</p>
+                            <div class="card-arrow">Otevřít geoportál →</div>
+                        </a>
+                        <a href="https://geoportal.kr-ustecky.cz/portal/" target="_blank" class="card">
+                            <h3 class="card-title">Ústecký kraj</h3>
+                            <p class="card-description">Geoportál Ústecký kraj</p>
+                            <div class="card-arrow">Otevřít geoportál →</div>
+                        </a>
+                        <a href="https://geoportal.kraj-lbc.cz/" target="_blank" class="card">
+                            <h3 class="card-title">Liberecký kraj</h3>
+                            <p class="card-description">Geoportál Liberecký kraj</p>
+                            <div class="card-arrow">Otevřít geoportál →</div>
+                        </a>
+                        <a href="https://geoportal.kr-karlovarsky.cz/web" target="_blank" class="card">
+                            <h3 class="card-title">Královéhradecký kraj</h3>
+                            <p class="card-description">Geoportál Královéhradecký kraj</p>
+                            <div class="card-arrow">Otevřít geoportál →</div>
+                        </a>
+                        <a href="https://mapy.pardubickykraj.cz/" target="_blank" class="card">
+                            <h3 class="card-title">Pardubický kraj</h3>
+                            <p class="card-description">Geoportál Pardubický kraj</p>
+                            <div class="card-arrow">Otevřít geoportál →</div>
+                        </a>
+                        <a href="https://gis.kr-vysocina.cz/" target="_blank" class="card">
+                            <h3 class="card-title">Kraj Vysočina</h3>
+                            <p class="card-description">Geoportál Kraj Vysočina</p>
+                            <div class="card-arrow">Otevřít geoportál →</div>
+                        </a>
+                        <a href="https://mapy.jmk.cz/geoportal" target="_blank" class="card">
+                            <h3 class="card-title">Jihomoravský kraj</h3>
+                            <p class="card-description">Geoportál Jihomoravský kraj</p>
+                            <div class="card-arrow">Otevřít geoportál →</div>
+                        </a>
+                        <a href="https://www.olkraj.cz/uzemni-planovani/mapove-aplikace" target="_blank" class="card">
+                            <h3 class="card-title">Olomoucký kraj</h3>
+                            <p class="card-description">Geoportál Olomoucký kraj</p>
+                            <div class="card-arrow">Otevřít geoportál →</div>
+                        </a>
+                        <a href="https://gis.kr-zlinsky.cz/-/mapy-zlinskeho-kraje" target="_blank" class="card">
+                            <h3 class="card-title">Zlínský kraj</h3>
+                            <p class="card-description">Geoportál Zlínský kraj</p>
+                            <div class="card-arrow">Otevřít geoportál →</div>
+                        </a>
+                        <a href="https://www.msk.cz/temata/mapy/index.html" target="_blank" class="card">
+                            <h3 class="card-title">Moravskoslezský kraj</h3>
+                            <p class="card-description">Geoportál Moravskoslezský kraj</p>
+                            <div class="card-arrow">Otevřít geoportál →</div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="public/lovable-uploads/77634cd9-1c01-4cc1-9fd7-0a565b184b2c.png" alt="Geoportály ČR Logo" class="footer-logo-img">
+                    <span class="footer-logo-text">Geoportály ČR</span>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="about.html" class="footer-link">O projektu</a>
+                    <a href="contact.html" class="footer-link">Kontakt</a>
+                </div>
+                
+                <div class="footer-brand">
+                   <img src="logo/dst_white.png" alt="Design Studio TOS" class="footer-brand-img">
+                </div>
+            </div>
+            
+            <div class="footer-copyright">
+               © 2025 Geoportály ČR. | Vytvořilo Design Studio TOS | Všechna práva vyhrazena.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>

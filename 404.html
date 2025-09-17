@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Stránka nenalezena | Geoportály ČR</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <link rel="icon" href="public/lovable-uploads/77634cd9-1c01-4cc1-9fd7-0a565b184b2c.png" type="image/png">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo-link">
+                <img src="public/lovable-uploads/77634cd9-1c01-4cc1-9fd7-0a565b184b2c.png" alt="Geoportály ČR Logo" class="logo">
+                <h1 class="logo-text">Geoportály ČR</h1>
+            </a>
+            
+           <nav class="nav desktop-nav">
+                <a href="about.html" class="nav-link">O projektu</a>
+                <div class="dropdown">
+                <a href="#" class="nav-link dropdown-toggle">Portály</a>
+                    <div class="dropdown-content">
+                        <a href="regions.html" class="nav-link">Kraje</a>
+                        <a href="cities.html" class="nav-link">Města/Obce</a>
+                        <a href="organizations.html" class="nav-link">Organizace</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-link">Kontakt</a>
+            </nav>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <nav class="mobile-nav" id="mobileNav">
+            <a href="about.html" class="mobile-nav-link">O projektu</a>
+            <a href="regions.html" class="mobile-nav-link">Portály</a>
+            <a href="contact.html" class="mobile-nav-link">Kontakt</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main style="flex-grow: 1; display: flex; align-items: center; justify-content: center; background-color: rgba(200, 220, 255, 0.05); padding: 5rem 0;">
+        <div style="text-align: center; padding: 0 1.5rem;">
+            <h1 style="font-size: 6rem; font-weight: 700; color: #0e3264; margin-bottom: 1rem; font-family: 'Montserrat', sans-serif;">404</h1>
+            <p style="font-size: 2rem; color: #0e3264; margin-bottom: 2rem;">Stránka nenalezena</p>
+            <p style="color: #666; margin-bottom: 2rem; max-width: 32rem; margin-left: auto; margin-right: auto;">
+                Omlouváme se, ale stránka, kterou hledáte, neexistuje nebo byla přesunuta.
+            </p>
+            <a href="index.html" class="geo-button">
+                Zpět na úvodní stránku
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="public/lovable-uploads/77634cd9-1c01-4cc1-9fd7-0a565b184b2c.png" alt="Geoportály ČR Logo" class="footer-logo-img">
+                    <span class="footer-logo-text">Geoportály ČR</span>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="about.html" class="footer-link">O projektu</a>
+                    <a href="contact.html" class="footer-link">Kontakt</a>
+                </div>
+                
+                <div class="footer-brand">
+                    <img src="logo/dst_white.png" alt="Design Studio TOS" class="footer-brand-img">
+                </div>
+            </div>
+            
+            <div class="footer-copyright">
+                        © 2025 Geoportály ČR. | Vytvořilo Design Studio TOS | Všechna práva vyhrazena.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,427 @@
+
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Města a obce - Geoportály ČR</title>
+    <meta name="description" content="Přehled geoportálů měst a obcí České republiky">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <link rel="icon" href="public/lovable-uploads/77634cd9-1c01-4cc1-9fd7-0a565b184b2c.png" type="image/png">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo-link">
+                <img src="public/lovable-uploads/77634cd9-1c01-4cc1-9fd7-0a565b184b2c.png" alt="Geoportály ČR Logo" class="logo">
+                <h1 class="logo-text">Geoportály ČR</h1>
+            </a>
+            
+            <nav class="nav desktop-nav">
+                <a href="about.html" class="nav-link">O projektu</a>
+                <div class="dropdown">
+                <a href="#" class="nav-link dropdown-toggle">Portály</a>
+                    <div class="dropdown-content">
+                        <a href="regions.html" class="nav-link">Kraje</a>
+                        <a href="cities.html" class="nav-link">Města/Obce</a>
+                        <a href="organizations.html" class="nav-link">Organizace</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-link">Kontakt</a>
+            </nav>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <nav class="mobile-nav" id="mobileNav">
+            <a href="about.html" class="mobile-nav-link">O projektu</a>
+            <a href="regions.html" class="mobile-nav-link">Portály</a>
+            <a href="contact.html" class="mobile-nav-link">Kontakt</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="page-hero">
+            <div class="container">
+                <h1 class="page-title">Města a obce</h1>
+                <p class="page-description">
+                    Přehled geoportálů měst a obcí České republiky
+                </p>
+            </div>
+        </section>
+
+        <!-- Content Section -->
+        <section class="page-content">
+                <div class="container search-container">
+                    <div class="search-input-wrapper">
+                        <input type="text" id="citySearch" placeholder="Hledat město..." class="search-input">
+                        <span class="search-icon">🔍</span>
+                    </div>
+                </div>
+            <div class="container">
+                <div class="grid grid-3">
+                    <a href="https://geoportalpraha.cz/" target="_blank" class="card">
+                        <h3 class="card-title">Praha</h3>
+                        <p class="card-description">Geoportál města Praha</p>
+                        <div class="card-arrow">Otevřít geoportál →</div>
+                    </a>
+                    <a href="https://gis.brno.cz/" target="_blank" class="card">
+                        <h3 class="card-title">Brno</h3>
+                        <p class="card-description">Geoportál města Brno</p>
+                        <div class="card-arrow">Otevřít geoportál →</div>
+                    </a>
+                    <a href="https://mapy.ostrava.cz/" target="_blank" class="card">
+                        <h3 class="card-title">Ostrava</h3>
+                        <p class="card-description">Geoportál města Ostrava</p>
+                        <div class="card-arrow">Otevřít geoportál →</div>
+                    </a>
+                    <a href="https://mapy.plzen.eu/" target="_blank" class="card">
+                        <h3 class="card-title">Plzeň</h3>
+                        <p class="card-description">Geoportál města Plzeň</p>
+                        <div class="card-arrow">Otevřít geoportál →</div>
+                    </a>
+                    <a href="https://www.liberec.cz/mapy/" target="_blank" class="card">
+                        <h3 class="card-title">Liberec</h3>
+                        <p class="card-description">Geoportál města Liberec</p>
+                        <div class="card-arrow">Otevřít geoportál →</div>
+                    </a>
+                    <a href="https://gis.upol.cz/" target="_blank" class="card">
+                        <h3 class="card-title">Olomouc</h3>
+                        <p class="card-description">Geoportál města Olomouc</p>
+                        <div class="card-arrow">Otevřít geoportál →</div>
+                    </a>
+                    <a href="http://cbgis.c-budejovice.cz/ITC/klient/" target="_blank" class="card">
+                        <h3 class="card-title">České Budějovice</h3>
+                        <p class="card-description">Geoportál města České Budějovice</p>
+                        <div class="card-arrow">Otevřít geoportál →</div>
+                    </a>
+                    <a href="https://geoportal.mmhk.cz/" target="_blank" class="card">
+                        <h3 class="card-title">Hradec Králové</h3>
+                        <p class="card-description">Geoportál města Hradec Králové</p>
+                        <div class="card-arrow">Otevřít geoportál →</div>
+                    </a>
+                    <a href="https://www.usti.cz/mapovy-portal/mapove-aplikace.html" target="_blank" class="card">
+                        <h3 class="card-title">Ústí nad Labem</h3>
+                        <p class="card-description">Geoportál města Ústí nad Labem</p>
+                        <div class="card-arrow">Otevřít geoportál →</div>
+                    </a>
+                    <a href="https://mapy.pardubice.eu/MyCity/index.html?ReturnUrl=%2fmycity" target="_blank" class="card">
+                        <h3 class="card-title">Pardubice</h3>
+                        <p class="card-description">Geoportál města Pardubice</p>
+                        <div class="card-arrow">Otevřít geoportál →</div>
+                    </a>
+                    <a href="#" class="card">
+                        <h3 class="card-title">Zlín</h3>
+                        <p class="card-description">Geoportál města Zlín</p>
+                        <div class="card-arrow">Otevřít geoportál →</div>
+                    </a>
+                    <a href="https://mapy.havirov-city.cz:50443/webportal/index.html" target="_blank" class="card">
+                        <h3 class="card-title">Havířov</h3>
+                        <p class="card-description">Geoportál města Havířov</p>
+                        <div class="card-arrow">Otevřít geoportál →</div>
+                    </a>
+                    <a href="https://kladno.gepro.cz/#/" target="_blank" class="card">
+                        <h3 class="card-title">Kladno</h3>
+                        <p class="card-description">Geoportál města Kladno</p>
+                        <div class="card-arrow">Otevřít geoportál →</div>
+                    </a>
+                    <a href="https://mapy.mesto-most.cz/portal/apps/sites/#/mapovy-portal" target="_blank" class="card">
+                        <h3 class="card-title">Most</h3>
+                        <p class="card-description">Geoportál města Most</p>
+                        <div class="card-arrow">Otevřít geoportál →</div>
+                    </a>
+                    <a href="https://mapy.opava-city.cz/portal/apps/instant/filtergallery/index.html?appid=1c82eae7a7b34a72bf9d82f039200dfd" target="_blank" class="card">
+                        <h3 class="card-title">Opava</h3>
+                        <p class="card-description">Geoportál města Opava</p>
+                        <div class="card-arrow">Otevřít geoportál →</div>
+                    </a>
+                    <a href="https://gis.frydekmistek.cz/" target="_blank" class="card">
+                        <h3 class="card-title">Frýdek-Místek</h3>
+                        <p class="card-description">Geoportál města Frýdek-Místek</p>
+                        <div class="card-arrow">Otevřít geoportál →</div>
+                    </a>
+                    <a href="https://gis.karvina.cz/" target="_blank" class="card">
+                        <h3 class="card-title">Karviná</h3>
+                        <p class="card-description">Geoportál města Karviná</p>
+                        <div class="card-arrow">Otevřít geoportál →</div>
+                    </a>
+                    <a href="https://gisportal.muor.cz/" target="_blank" class="card">
+                        <h3 class="card-title">Orlová</h3>
+                        <p class="card-description">Geoportál města Orlová</p>
+                        <div class="card-arrow">Otevřít geoportál →</div>
+                    </a>
+                    <a href="https://geoportal.jihlava.cz/" target="_blank" class="card">
+                        <h3 class="card-title">Jihlava</h3>
+                        <p class="card-description">Geoportál města Jihlava</p>
+                        <div class="card-arrow">Otevřít geoportál →</div>
+                    </a>
+                    <a href="https://www.teplice.cz/mapovy-portal/ms-34196/p1=34196" target="_blank" class="card">
+                        <h3 class="card-title">Teplice</h3>
+                        <p class="card-description">Geoportál města Teplice</p>
+                        <div class="card-arrow">Otevřít geoportál →</div>
+                    </a>
+                    <a href="https://mapy.bohumin.cz/" target="_blank" target="_blank" class="card">
+                        <h3 class="card-title">Bohumín</h3>
+                        <p class="card-description">Geoportál města Bohumín</p>
+                        <div class="card-arrow">Otevřít geoportál →</div>
+                    </a>
+                    <a href="https://karlovy-vary.obce.gepro.cz/#/" target="_blank" target="_blank" class="card">
+                        <h3 class="card-title">Karlovy Vary</h3>
+                        <p class="card-description">Geoportál města Karlovy Vary</p>
+                        <div class="card-arrow">Otevřít geoportál →</div>
+                    </a>
+                    <a href="https://mapy.muznojmo.cz/app/maps.php" target="_blank" target="_blank" class="card">
+                        <h3 class="card-title">Znojmo</h3>
+                        <p class="card-description">Geoportál města Znojmo</p>
+                        <div class="card-arrow">Otevřít geoportál →</div>
+                    </a>
+                    <a href="https://mikulov.obce.gepro.cz/#/" target="_blank" target="_blank" class="card">
+                        <h3 class="card-title">Mikulov</h3>
+                        <p class="card-description">Geoportál města Mikulov</p>
+                        <div class="card-arrow">Otevřít geoportál →</div>
+                    </a>
+                    <a href="https://www.zlin.eu/mapy" target="_blank" target="_blank" class="card">
+                        <h3 class="card-title">Zlín</h3>
+                        <p class="card-description">Geoportál města Zlín</p>
+                        <div class="card-arrow">Otevřít geoportál →</div>
+                    </a>
+                    <a href="https://breclav.eu/urad-on-line-sluzby-mapovy-portal-mesta-breclavi" target="_blank" target="_blank" class="card">
+                        <h3 class="card-title">Břeclav</h3>
+                        <p class="card-description">Geoportál města Břeclav</p>
+                        <div class="card-arrow">Otevřít geoportál →</div>
+                    </a>
+                    <a href="https://mapserver.koprivnice.cz/" target="_blank" target="_blank" class="card">
+                        <h3 class="card-title">Kopřivnice</h3>
+                        <p class="card-description">Geoportál města Kopřivnice</p>
+                        <div class="card-arrow">Otevřít geoportál →</div>
+                    </a>
+                    <a href="http://region.trinecko.cz/OS_vs_trinec/index.xhtml" target="_blank" target="_blank" class="card">
+                        <h3 class="card-title">Třinec</h3>
+                        <p class="card-description">Geoportál města Třinec</p>
+                        <div class="card-arrow">Otevřít geoportál →</div>
+                    </a>
+                    <a href="https://www.mubruntal.cz/mapovy-server/ds-15489/p1=81929" target="_blank" target="_blank" class="card">
+                        <h3 class="card-title">Bruntál</h3>
+                        <p class="card-description">Geoportál města Bruntál</p>
+                        <div class="card-arrow">Otevřít geoportál →</div>
+                    </a>
+                    <a href="https://mapy.jesenik.cz/" target="_blank" target="_blank" class="card">
+                        <h3 class="card-title">Jeseník</h3>
+                        <p class="card-description">Geoportál města Jeseník</p>
+                        <div class="card-arrow">Otevřít geoportál →</div>
+                    </a>
+                    <a href="https://www.mohelnice.cz/mapovy-portal/d-224240" target="_blank" target="_blank" class="card">
+                        <h3 class="card-title">Mohelnice</h3>
+                        <p class="card-description">Geoportál města Mohelnice</p>
+                        <div class="card-arrow">Otevřít geoportál →</div>
+                    </a>
+                    <a href="https://app.gisonline.cz/sternberk" target="_blank" target="_blank" class="card">
+                        <h3 class="card-title">Šternberk</h3>
+                        <p class="card-description">Geoportál města Šternberk</p>
+                        <div class="card-arrow">Otevřít geoportál →</div>
+                    </a>
+                    <a href="https://gis.zabrezsko.cz/" target="_blank" target="_blank" class="card">
+                        <h3 class="card-title">Zábřeh</h3>
+                        <p class="card-description">Geoportál města Zábřeh</p>
+                        <div class="card-arrow">Otevřít geoportál →</div>
+                    </a>
+                    <a href="https://www.prostejov.eu/cs/podnikatel/mapovy-portal.html" target="_blank" target="_blank" class="card">
+                        <h3 class="card-title">Prostějov</h3>
+                        <p class="card-description">Geoportál města Prostějov</p>
+                        <div class="card-arrow">Otevřít geoportál →</div>
+                    </a>
+                    <a href="https://mapy-prerov.hub.arcgis.com/search?collection=appAndMap" target="_blank" target="_blank" class="card">
+                        <h3 class="card-title">Přerov</h3>
+                        <p class="card-description">Geoportál města Přerov</p>
+                        <div class="card-arrow">Otevřít geoportál →</div>
+                    </a>
+                    <a href="https://ms.topos.cz/gmsclient/?v=nachod" target="_blank" target="_blank" class="card">
+                        <h3 class="card-title">Náchod</h3>
+                        <p class="card-description">Geoportál města Náchod</p>
+                        <div class="card-arrow">Otevřít geoportál →</div>
+                    </a>
+                    <a href="https://trutnov.tmapserver.cz/" target="_blank" target="_blank" class="card">
+                        <h3 class="card-title">Trutnov</h3>
+                        <p class="card-description">Geoportál města Trutnov</p>
+                        <div class="card-arrow">Otevřít geoportál →</div>
+                    </a>
+                    <a href="https://gis.mb-net.cz/" target="_blank" target="_blank" class="card">
+                        <h3 class="card-title">Mladá Boleslav</h3>
+                        <p class="card-description">Geoportál města Mladá Boleslav</p>
+                        <div class="card-arrow">Otevřít geoportál →</div>
+                    </a>
+                    <a href="http://mapy.melnik.cz/geoportal/" target="_blank" target="_blank" class="card">
+                        <h3 class="card-title">Mělník</h3>
+                        <p class="card-description">Geoportál města Mělník</p>
+                        <div class="card-arrow">Otevřít geoportál →</div>
+                    </a>
+                    <a href="https://pribram.obce.gepro.cz/#/" target="_blank" target="_blank" class="card">
+                        <h3 class="card-title">Příbram</h3>
+                        <p class="card-description">Geoportál města Příbram</p>
+                        <div class="card-arrow">Otevřít geoportál →</div>
+                    </a>
+                    <a href="https://geoportal.ckrumlov.cz/" target="_blank" target="_blank" class="card">
+                        <h3 class="card-title">Český Krumlov</h3>
+                        <p class="card-description">Geoportál města Český Krumlov</p>
+                        <div class="card-arrow">Otevřít geoportál →</div>
+                    </a>
+                    <a href="https://ricany.gepro.cz/#/" target="_blank" target="_blank" class="card">
+                        <h3 class="card-title">Říčany</h3>
+                        <p class="card-description">Geoportál města Říčany</p>
+                        <div class="card-arrow">Otevřít geoportál →</div>
+                    </a>
+                    <a href="https://gis.mujicin.cz/gis" target="_blank" target="_blank" class="card">
+                        <h3 class="card-title">Jičín</h3>
+                        <p class="card-description">Geoportál města Jičín</p>
+                        <div class="card-arrow">Otevřít geoportál →</div>
+                    </a>
+                    <a href="https://gis.mestojablonec.cz/" target="_blank" target="_blank" class="card">
+                        <h3 class="card-title">Jablonec nad Nisou</h3>
+                        <p class="card-description">Geoportál města Jablonec nad Nisou</p>
+                        <div class="card-arrow">Otevřít geoportál →</div>
+                    </a>
+                    <a href="https://www.novyjicin.cz/rychle-info/gis-novy-jicin/" target="_blank" target="_blank" class="card">
+                        <h3 class="card-title">Nový Jičín</h3>
+                        <p class="card-description">Geoportál města Nový Jičín</p>
+                        <div class="card-arrow">Otevřít geoportál →</div>
+                    </a>
+                    <a href="https://mapy.mestovsetin.cz/" target="_blank" target="_blank" class="card">
+                        <h3 class="card-title">Vsetín</h3>
+                        <p class="card-description">Geoportál města Vsetín</p>
+                        <div class="card-arrow">Otevřít geoportál →</div>
+                    </a>
+                    <a href="https://mapy.roznov.cz/" target="_blank" target="_blank" class="card">
+                        <h3 class="card-title">Rožnov pod Radhoštěm</h3>
+                        <p class="card-description">Geoportál města Rožnov pod Radhoštěm</p>
+                        <div class="card-arrow">Otevřít geoportál →</div>
+                    </a>
+                    <a href="https://frenstat.obce.gepro.cz/#/" target="_blank" target="_blank" class="card">
+                        <h3 class="card-title">Frenštát pod Radhoštěm</h3>
+                        <p class="card-description">Geoportál města Frenštát pod Radhoštěm</p>
+                        <div class="card-arrow">Otevřít geoportál →</div>
+                    </a>
+                    <a href="https://www.arcgis.com/apps/MapAndAppGallery/index.html?appid=a0758731a12d4bf0a9af38826567065d" target="_blank" target="_blank" class="card">
+                        <h3 class="card-title">Jablunkov</h3>
+                        <p class="card-description">Geoportál města Jablunkov</p>
+                        <div class="card-arrow">Otevřít geoportál →</div>
+                    </a>
+                    <a href="https://mapy.tesin.cz/" target="_blank" target="_blank" class="card">
+                        <h3 class="card-title">Český Těšín</h3>
+                        <p class="card-description">Geoportál města Český Těšín</p>
+                        <div class="card-arrow">Otevřít geoportál →</div>
+                    </a>
+                    <a href="https://mapy.mesto-hranice.cz/" target="_blank" target="_blank" class="card">
+                        <h3 class="card-title">Hranice</h3>
+                        <p class="card-description">Geoportál města Hranice</p>
+                        <div class="card-arrow">Otevřít geoportál →</div>
+                    </a>
+                    <a href="https://www.gobec.cz/moravska-trebova/" target="_blank" target="_blank" class="card">
+                        <h3 class="card-title">Moravská Třebová</h3>
+                        <p class="card-description">Geoportál města Moravská Třebová</p>
+                        <div class="card-arrow">Otevřít geoportál →</div>
+                    </a>
+                    <a href="https://portal.mapotip.cz/makov-sy" target="_blank" target="_blank" class="card">
+                        <h3 class="card-title">Makov</h3>
+                        <p class="card-description">Geoportál obce Makov</p>
+                        <div class="card-arrow">Otevřít geoportál →</div>
+                    </a>
+                    <a href="http://mapy.ceska-trebova.cz/mapovyportal/" target="_blank" target="_blank" class="card">
+                        <h3 class="card-title">Česká Třebová</h3>
+                        <p class="card-description">Geoportál města Česká Třebová</p>
+                        <div class="card-arrow">Otevřít geoportál →</div>
+                    </a>
+                    <a href="https://mapovy-portal-meuchrudim.hub.arcgis.com/" target="_blank" target="_blank" class="card">
+                        <h3 class="card-title">Chrudim</h3>
+                        <p class="card-description">Geoportál města Chrudim</p>
+                        <div class="card-arrow">Otevřít geoportál →</div>
+                    </a>
+                    <a href="https://gis.meucaslav.cz/" target="_blank" target="_blank" class="card">
+                        <h3 class="card-title">Čáslav</h3>
+                        <p class="card-description">Geoportál města Čáslav</p>
+                        <div class="card-arrow">Otevřít geoportál →</div>
+                    </a>
+                    <a href="https://kolin.obce.gepro.cz/#/" target="_blank" target="_blank" class="card">
+                        <h3 class="card-title">Kolín</h3>
+                        <p class="card-description">Geoportál města Kolín</p>
+                        <div class="card-arrow">Otevřít geoportál →</div>
+                    </a>
+                    <a href="https://www.gobec.cz/chvaletice/#16/1716379.57/6452235.45/GYQwjA3AciVA" target="_blank" target="_blank" class="card">
+                        <h3 class="card-title">Chvaletice</h3>
+                        <p class="card-description">Geoportál města Chvaletice</p>
+                        <div class="card-arrow">Otevřít geoportál →</div>
+                    </a>
+                    <a href="https://podebrady.obce.gepro.cz/#/" target="_blank" target="_blank" class="card">
+                        <h3 class="card-title">Poděbrady</h3>
+                        <p class="card-description">Geoportál města Poděbrady</p>
+                        <div class="card-arrow">Otevřít geoportál →</div>
+                    </a>
+                    <a href="https://neratovice.gepro.cz/#/" target="_blank" target="_blank" class="card">
+                        <h3 class="card-title">Neratovice</h3>
+                        <p class="card-description">Geoportál města Neratovice</p>
+                        <div class="card-arrow">Otevřít geoportál →</div>
+                    </a>
+                    <a href="https://mulitvinov.maps.arcgis.com/home/index.html" target="_blank" target="_blank" class="card">
+                        <h3 class="card-title">Litvínov</h3>
+                        <p class="card-description">Geoportál města Litvínov</p>
+                        <div class="card-arrow">Otevřít geoportál →</div>
+                    </a>
+                    <a href="https://gis.muml.cz/#/" target="_blank" target="_blank" class="card">
+                        <h3 class="card-title">Mariánské Lázně</h3>
+                        <p class="card-description">Geoportál města Mariánské Lázně</p>
+                        <div class="card-arrow">Otevřít geoportál →</div>
+                    </a>
+                     <a href="https://klatovy.obce.gepro.cz/#/" target="_blank" target="_blank" class="card">
+                        <h3 class="card-title">Klatovy</h3>
+                        <p class="card-description">Geoportál města Klatovy</p>
+                        <div class="card-arrow">Otevřít geoportál →</div>
+                    </a>
+                </div>
+        
+              
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="public/lovable-uploads/77634cd9-1c01-4cc1-9fd7-0a565b184b2c.png" alt="Geoportály ČR Logo" class="footer-logo-img">
+                    <span class="footer-logo-text">Geoportály ČR</span>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="about.html" class="footer-link">O projektu</a>
+                    <a href="contact.html" class="footer-link">Kontakt</a>
+                </div>
+                
+                <div class="footer-brand">
+                   <img src="logo/dst_white.png" alt="Design Studio TOS" class="footer-brand-img">
+                </div>
+            </div>
+            
+            <div class="footer-copyright">
+                © 2025 Geoportály ČR. | Vytvořilo Design Studio TOS | Všechna práva vyhrazena.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
